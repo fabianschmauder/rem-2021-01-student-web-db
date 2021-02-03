@@ -36,7 +36,7 @@ public class StudentController {
         throw new ResponseStatusException(HttpStatus.NOT_FOUND, "student with id "+ id+ " not found");
     }
 
-    @PutMapping
+    @PostMapping
     public Student addStudent(@RequestBody Student student){
         return studentsService.addStudent(student);
     }
