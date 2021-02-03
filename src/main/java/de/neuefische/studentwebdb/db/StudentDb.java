@@ -11,13 +11,10 @@ import java.util.Optional;
 @Repository
 public class StudentDb {
 
-    private final List<Student> students = new ArrayList<>(List.of(
-            new Student("1", "Frank", "cologne"),
-            new Student("2", "Lene", "hamburg")
-    ));
+    private final List<Student> students = new ArrayList<>();
 
 
-    public List<Student> getStudents(){
+    public List<Student> listStudents(){
         return students;
     }
 

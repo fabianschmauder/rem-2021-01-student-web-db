@@ -25,7 +25,7 @@ public class StudentsService {
 
     public List<Student> searchStudents(String search) {
         List<Student> result = new ArrayList<>();
-        List<Student> students = this.studentDb.getStudents();
+        List<Student> students = this.studentDb.listStudents();
         for (Student student : students) {
             if (student.getName().contains(search)) {
                 result.add(student);
@@ -50,7 +50,7 @@ public class StudentsService {
 
     public List<Student> getStudentsByUniversity(String university){
         List<Student> result = new ArrayList<>();
-        List<Student> students = this.studentDb.getStudents();
+        List<Student> students = this.studentDb.listStudents();
         for (Student student : students) {
             if(student.getUniversity().equals(university)){
                 result.add(student);
