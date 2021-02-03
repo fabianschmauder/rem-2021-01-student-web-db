@@ -43,7 +43,6 @@ public class StudentsService {
         if(student.getName().isBlank()){
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST ,"Student name is empty");
         }
-
         return this.studentDb.add(student);
     }
 
